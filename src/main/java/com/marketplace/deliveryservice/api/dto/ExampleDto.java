@@ -1,6 +1,5 @@
-package com.marketplace.initexampleservice.api.dto;
+package com.marketplace.deliveryservice.api.dto;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
@@ -11,7 +10,6 @@ import java.util.UUID;
 
 /**
  * ExampleDTO.
- *
  */
 @Data
 @Schema(description = "Объект для представления")

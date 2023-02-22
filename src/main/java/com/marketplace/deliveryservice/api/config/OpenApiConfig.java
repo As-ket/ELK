@@ -1,6 +1,5 @@
-package com.marketplace.initexampleservice.api.config;
+package com.marketplace.deliveryservice.api.config;
 
-import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.PathSelectors;
@@ -11,7 +10,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
  * Конфигурация OpenApi.
- *
  */
 @Configuration
 @EnableSwagger2
