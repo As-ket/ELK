@@ -1,4 +1,4 @@
-package com.marketplace.initexampleservice.api.dto;
+package com.marketplace.deliveryservice.api.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
@@ -10,7 +10,6 @@ import javax.validation.constraints.NotBlank;
 
 /**
  * ValidationFieldInfo.
- *
  */
 @Data
 @Builder(toBuilder = true)

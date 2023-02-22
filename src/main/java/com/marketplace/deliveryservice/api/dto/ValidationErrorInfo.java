@@ -1,4 +1,4 @@
-package com.marketplace.initexampleservice.api.dto;
+package com.marketplace.deliveryservice.api.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
@@ -14,7 +14,6 @@ import java.util.Map;
 
 /**
  * ValidationError.
- *
  */
 @Data
 @Builder(toBuilder = true)
