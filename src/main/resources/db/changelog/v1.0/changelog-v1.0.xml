@@ -9,7 +9,8 @@
     <changeSet id="0" author="sergey_rendarevskii">
         <tagDatabase tag="db_init"/>
     </changeSet>
-
+    <include file="create-table-courier.xml" relativeToChangelogFile="true"/>
     <include file="create-table-client.xml" relativeToChangelogFile="true"/>
     <include file="create-table-order.xml" relativeToChangelogFile="true"/>
+
 </databaseChangeLog>
