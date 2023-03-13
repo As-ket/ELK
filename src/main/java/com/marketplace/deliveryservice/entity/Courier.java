@@ -1,4 +1,4 @@
-package com.marketplace.deliveryservice.api.entity;
+package com.marketplace.deliveryservice.entity;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
@@ -9,20 +9,23 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.UUID;
 
+
 /**
- * Сущность, Клиент.
+ * Сущность, Курьер.
  * id - уникальный идентификатор
  * name - имя
- * phone_number - Номер телефона
+ * phone_number - номер телефона
+ * city - город
+ * delivery_count - оплата доставки
  */
 
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "CLIENT")
-@Schema(description = "Владелец заказа")
-public class Client {
+@Table(name = "COURIER")
+@Schema(description = "Курьер")
+public class Courier {
     @Id
     @Column(name = "id")
     private UUID id;
@@ -34,5 +37,12 @@ public class Client {
     @Column(name = "phone_number")
     @NotNull
     private String phoneNumber;
-}
 
+    @Column(name = "city")
+    @NotNull
+    private String city;
+
+    @Column(name = "delivery_count")
+    @NotNull
+    private Long deliveryCount;
+}

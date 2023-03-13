@@ -1,4 +1,4 @@
-package com.marketplace.deliveryservice.api.entity;
+package com.marketplace.deliveryservice.entity;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
