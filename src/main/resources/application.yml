@@ -22,9 +22,6 @@ spring:
     password: admin
     change-log: classpath:db/changelog/v1.0/changelog-v1.0.xml
 
-server:
-  port: 0
-
 eureka:
   client:
     service-url:
