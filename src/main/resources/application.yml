@@ -1,6 +1,6 @@
 spring:
   application:
-    name: init-example-service
+    name: delivery-service
   datasource:
     url: jdbc:postgresql://localhost:5432/postgres?currentSchema=postgres
     username: postgres
@@ -21,3 +21,8 @@ spring:
     user: postgres
     password: admin
     change-log: classpath:db/changelog/v1.0/changelog-v1.0.xml
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
