@@ -49,4 +49,7 @@ public class Order {
     @Column(name = "delivery_time")
     @NotNull
     private OffsetDateTime dateTime;
+    @ManyToOne(targetEntity = Courier.class)
+    @JoinColumn(name = "courier_id")
+    private Courier courier;
 }

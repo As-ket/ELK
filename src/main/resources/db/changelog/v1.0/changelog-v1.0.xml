@@ -12,5 +12,7 @@
     <include file="create-table-courier.xml" relativeToChangelogFile="true"/>
     <include file="create-table-client.xml" relativeToChangelogFile="true"/>
     <include file="create-table-order.xml" relativeToChangelogFile="true"/>
+    <include file="add-courier-id-column.xml" relativeToChangelogFile="true"/>
+
 
 </databaseChangeLog>
