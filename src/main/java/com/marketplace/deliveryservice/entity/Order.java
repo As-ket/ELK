@@ -5,7 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import java.time.OffsetDateTime;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -23,7 +22,7 @@ import java.util.UUID;
  */
 
 @Entity
-@Table(name = "ORDER")
+@Table(name = "orders")
 @Schema(description = "Заказ")
 @Data
 @Builder
@@ -31,25 +30,26 @@ import java.util.UUID;
 @AllArgsConstructor
 public class Order {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private UUID id;
     @Column(name = "state")
     @NotNull
     private String state;
-    @ManyToOne(targetEntity = Client.class)
+    @ManyToOne(targetEntity = Client.class, fetch = FetchType.LAZY)
     @JoinColumn(name = "client_id")
     @NotNull
     private Client client;
     @Column(name = "delivery_address")
     @NotNull
-    UUID deliveryAddress;
+    private UUID deliveryAddress;
     @Column(name = "item_count")
     @NotNull
     private Integer count;
     @Column(name = "delivery_time")
     @NotNull
     private OffsetDateTime dateTime;
-    @ManyToOne(targetEntity = Courier.class)
+    @ManyToOne(targetEntity = Courier.class, fetch = FetchType.LAZY)
     @JoinColumn(name = "courier_id")
     private Courier courier;
 }

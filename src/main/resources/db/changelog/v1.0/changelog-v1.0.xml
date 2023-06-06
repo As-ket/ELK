@@ -15,4 +15,5 @@
     <include file="add-courier-id-column.xml" relativeToChangelogFile="true"/>
 
 
+
 </databaseChangeLog>

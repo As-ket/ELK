@@ -1,4 +1,4 @@
-package com.marketplace.initexampleservice;
+package com.marketplace.deliveryservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

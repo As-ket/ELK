@@ -1,11 +1,10 @@
 package com.marketplace.deliveryservice.repository;
 
-import com.marketplace.deliveryservice.entity.Order;
+import com.marketplace.deliveryservice.entity.Client;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import java.util.UUID;
 
 @Repository
-public interface OrderRepository extends JpaRepository<Order, UUID> {
-
+public interface ClientRepository extends JpaRepository<Client, UUID> {
 }
