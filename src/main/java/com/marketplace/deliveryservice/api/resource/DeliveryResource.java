@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 
 @RequestMapping(UrlConstants.MAIN_URL)
-//@Tag(name = "Выбор-заказа", description = "Назначение курьера, после взятия заказа в работу")
+@Tag(name = "Выбор-заказа", description = "Назначение курьера, после взятия заказа в работу")
 public interface DeliveryResource {
     @PutMapping (value = "/get-delivery")
     @Operation(summary = "Выбор заказа", tags = "Выбор заказа курьером")
