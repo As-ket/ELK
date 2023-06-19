@@ -38,6 +38,21 @@
             <groupId>org.springframework.kafka</groupId>
             <artifactId>spring-kafka</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.github.piomin</groupId>
+            <artifactId>logstash-logging-spring-boot-starter</artifactId>
+            <version>1.2.2.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>net.logstash.logback</groupId>
+            <artifactId>logstash-logback-encoder</artifactId>
+            <version>6.6</version>
+        </dependency>
+
 
         <dependency>
             <groupId>org.postgresql</groupId>

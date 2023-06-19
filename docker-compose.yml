@@ -9,3 +9,44 @@ services:
       POSTGRES_DB: postgres
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: admin
+
+  logstash:
+    image: logstash:8.8.0
+    volumes:
+      #       - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml:ro
+      - ./config/pipelines.yml:/Users/admin/IdeaProjects/mydelivery-service/config/pipelines.yml
+      - ./config/pipelines:/Users/admin/IdeaProjects/mydelivery-service/config/pipelines/logstash.conf
+      - ./logs:/Users/admin/IdeaProjects/mydelivery-service/myapp.log
+    networks:
+      - es-net
+    ports:
+      - "5000:5000"
+    environment:
+      LS_JAVA_OPTS: "-Xmx256m -Xms256m"
+
+  elasticsearch:
+    container_name: es-container
+    image: elasticsearch:7.6.2
+    environment:
+      - xpack.security.enabled=false
+      - xpack.license.self_generated.type:basic
+      - "discovery.type=single-node"
+    networks:
+      - es-net
+    ports:
+      - "9200:9200"
+
+  kibana:
+    container_name: kb-container
+    image: kibana:7.0.1
+    environment:
+      - ELASTICSEARCH_HOSTS=http://es-container:9200
+    networks:
+      - es-net
+    depends_on:
+      - elasticsearch
+    ports:
+      - "5601:5601"
+networks:
+  es-net:
+    driver: bridge
